@@ -30,13 +30,6 @@ const server = http.createServer((request, response) => {
     return;
   }
 
-  if (request.url !== "/?hello=") {
-    response.status = 500;
-    response.header = "Content-Type: text/html";
-    response.end("");
-    return;
-  }
-
   response.status = 200;
   response.statusMessage = "OK";
   response.header = "Content-Type: text/plain";
