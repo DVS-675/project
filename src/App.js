@@ -19,6 +19,7 @@ const server = http.createServer((request, response) => {
       response.end();
       return;
     } else {
+      response.writeHead(400, { "Content-Type": "text/plain" });
       response.write("Enter a name");
       response.end();
       return;
